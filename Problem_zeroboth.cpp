@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-void zeroBoth(int *x, int *y) {
-    *x = 0;
-    *y = 0;
+void zeroBoth(int *px, int *py) {
+    *px = 0;
+    *py = 0;
 }
 
 int main(int argc, char const *argv[]) {
