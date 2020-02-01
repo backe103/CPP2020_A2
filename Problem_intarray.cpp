@@ -20,14 +20,30 @@ int main(int argc, char const *argv[]) {
             validInput = true;
         } else {
             cout << "Invalid input, please try again!" << endl;
-            continue;
         }
     }
 
     int numberArray[arraySize];
-    validInput = false; // set to false so new loop for input validation can start.
 
+    for (arrayIndex = 0; arrayIndex < arraySize; ++arrayIndex) {
+        validInput = false; // set to false for new input validation while loop.
+        while(validInput == false) {
+            cout << "Enter element " << arrayIndex + 1 << " of array" << endl;
+            cout << "Ensure it is a nonegative integer.";
+            cin >> inputNumber;
+            if (inputNumber >= 0) {
+                numberArray[arrayIndex] = inputInt;
+                validInput = true;
+            } else {
+                cout << "Invalid input, please try again!" << endl;
+            }
+        }
+    }
 
+    cout << "Your array consists of: ";
+    for (int i = 0; i < arraySize; ++i) {
+        cout << numberArray[i];
+    }
 
     return 0;
 }
